@@ -1,0 +1,8 @@
+classes= 13
+train  = /home/B190101/datasets/face/train.txt
+valid  = /home/B190101/datasets/face/val.txt
+names = /home/B190101/datasets/face/face.names
+backup = /home/B190101/darknet/backup
+#eval=coco
+
+
