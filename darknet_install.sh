@@ -38,6 +38,10 @@ python3 convert_wider_to_yolo.py
 
 find "$(pwd)/train" -name "*.jpg" > train.txt
 find "$(pwd)/val" -name "*.jpg" > val.txt
+
+# 가중치 받기
+wget https://github.com/cwal1220/dms/releases/download/release/yolov4-face-tiny.weights
+
 cd ..
 
 # 학습하기
