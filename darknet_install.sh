@@ -36,13 +36,14 @@ sudo apt install python3-pip
 pip3 install opencv-python tqdm
 python3 convert_wider_to_yolo.py
 
-find "$(pwd)/train" -name "*.jpg" > train.txt
-find "$(pwd)/val" -name "*.jpg" > val.txt
+cd ..
+find dms/train -name "*.jpg" >> dms/train.txt
+# find "$(pwd)/train" -name "*.jpg" > train.txt
+find dms/val -name "*.jpg" >> dms/val.txt
+# find "$(pwd)/val" -name "*.jpg" > val.txt
 
 # 가중치 받기
 wget https://github.com/cwal1220/dms/releases/download/release/yolov4-face-tiny.weights
-
-cd ..
 
 # 학습하기
 ./darknet detector train dms/face.data dms/yolov4-face-tiny.cfg dms/yolov4-face-tiny.weights -map
